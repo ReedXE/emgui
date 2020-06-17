@@ -58,7 +58,7 @@ namespace emgui
             }
             else if (txtEmployeeStatus.Text == "")
             {
-                MessageBox.Show("Please enter a status value of: 1, 2 or 3.");
+                MessageBox.Show("Please enter a status value of: 0, 1 or 2.");
                 return false;
             }
             else

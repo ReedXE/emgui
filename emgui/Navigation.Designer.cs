@@ -39,7 +39,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(51, 40);
+            this.label1.Location = new System.Drawing.Point(100, 42);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(102, 13);
             this.label1.TabIndex = 0;
@@ -67,7 +67,7 @@
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(644, 384);
+            this.btnExit.Location = new System.Drawing.Point(86, 344);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(98, 29);
             this.btnExit.TabIndex = 3;
@@ -99,7 +99,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(305, 450);
             this.Controls.Add(this.btnUpdateEmployee);
             this.Controls.Add(this.btnGoToShow);
             this.Controls.Add(this.btnExit);
