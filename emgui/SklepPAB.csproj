@@ -48,9 +48,19 @@
     <Reference Include="Microsoft.AspNet.Identity.EntityFramework, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.3\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.EJ2, Version=19.1.0.66, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.EJ2.AspNet.Core.19.1.0.66\lib\net451\Syncfusion.EJ2.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Licensing, Version=19.1460.0.66, Culture=neutral, PublicKeyToken=632609b4d040f6b4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.Licensing.19.1.0.66\lib\net46\Syncfusion.Licensing.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -62,46 +72,96 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DelEmployee.cs">
+    <Compile Include="AddProduct.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DelEmployee.Designer.cs">
-      <DependentUpon>DelEmployee.cs</DependentUpon>
+    <Compile Include="AddProduct.Designer.cs">
+      <DependentUpon>AddProduct.cs</DependentUpon>
     </Compile>
-    <Compile Include="Navigation.cs">
+    <Compile Include="AddShop.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Navigation.Designer.cs">
-      <DependentUpon>Navigation.cs</DependentUpon>
+    <Compile Include="AddShop.Designer.cs">
+      <DependentUpon>AddShop.cs</DependentUpon>
     </Compile>
-    <Compile Include="NewEmployee.cs">
+    <Compile Include="ClientAdd.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NewEmployee.Designer.cs">
-      <DependentUpon>NewEmployee.cs</DependentUpon>
+    <Compile Include="ClientAdd.Designer.cs">
+      <DependentUpon>ClientAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClientDel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientDel.Designer.cs">
+      <DependentUpon>ClientDel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClientUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientUpdate.Designer.cs">
+      <DependentUpon>ClientUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataClasses1.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataClasses1.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="DelProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DelProduct.Designer.cs">
+      <DependentUpon>DelProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DelShop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DelShop.Designer.cs">
+      <DependentUpon>DelShop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Show.cs">
+    <Compile Include="UpdateProduct.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Show.Designer.cs">
-      <DependentUpon>Show.cs</DependentUpon>
+    <Compile Include="UpdateProduct.Designer.cs">
+      <DependentUpon>UpdateProduct.cs</DependentUpon>
     </Compile>
-    <Compile Include="Update.cs">
+    <Compile Include="UpdateStore.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Update.Designer.cs">
-      <DependentUpon>Update.cs</DependentUpon>
+    <Compile Include="UpdateStore.Designer.cs">
+      <DependentUpon>UpdateStore.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="DelEmployee.resx">
-      <DependentUpon>DelEmployee.cs</DependentUpon>
+    <EmbeddedResource Include="AddProduct.resx">
+      <DependentUpon>AddProduct.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Navigation.resx">
-      <DependentUpon>Navigation.cs</DependentUpon>
+    <EmbeddedResource Include="AddShop.resx">
+      <DependentUpon>AddShop.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NewEmployee.resx">
-      <DependentUpon>NewEmployee.cs</DependentUpon>
+    <EmbeddedResource Include="ClientAdd.resx">
+      <DependentUpon>ClientAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientDel.resx">
+      <DependentUpon>ClientDel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientUpdate.resx">
+      <DependentUpon>ClientUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DelProduct.resx">
+      <DependentUpon>DelProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DelShop.resx">
+      <DependentUpon>DelShop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -112,12 +172,20 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Show.resx">
-      <DependentUpon>Show.cs</DependentUpon>
+    <EmbeddedResource Include="UpdateProduct.resx">
+      <DependentUpon>UpdateProduct.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Update.resx">
-      <DependentUpon>Update.cs</DependentUpon>
+    <EmbeddedResource Include="UpdateStore.resx">
+      <DependentUpon>UpdateStore.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="DataClasses1.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>DataClasses1.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataClasses1.dbml.layout">
+      <DependentUpon>DataClasses1.dbml</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -131,6 +199,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

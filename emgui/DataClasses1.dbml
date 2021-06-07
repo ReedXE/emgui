@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="store_db" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=localhost\SQLEXPRESS01;Initial Catalog=store_db;Integrated Security=True" SettingsObjectName="emgui.Properties.Settings" SettingsPropertyName="store_dbConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Product" Member="Product">
+    <Type Name="Product">
+      <Column Name="idProduct" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="idStore" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ProductName" Type="System.String" DbType="Char(40) NOT NULL" CanBeNull="false" />
+      <Column Name="Type" Type="System.String" DbType="Char(40) NOT NULL" CanBeNull="false" />
+      <Column Name="Price" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="modelNumber" Type="System.String" DbType="Char(40) NOT NULL" CanBeNull="false" />
+      <Association Name="Store_Product" Member="Store" ThisKey="idStore" OtherKey="idStore" Type="Store" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Store" Member="Store">
+    <Type Name="Store">
+      <Column Name="idStore" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="Char(40) NOT NULL" CanBeNull="false" />
+      <Column Name="storeAddress" Type="System.String" DbType="Char(40) NOT NULL" CanBeNull="false" />
+      <Column Name="City" Type="System.String" DbType="Char(40) NOT NULL" CanBeNull="false" />
+      <Column Name="Phone" Type="System.String" DbType="Char(12) NOT NULL" CanBeNull="false" />
+      <Column Name="Other" Type="System.String" DbType="Char(40) NOT NULL" CanBeNull="false" />
+      <Association Name="Store_Product" Member="Product" ThisKey="idStore" OtherKey="idStore" Type="Product" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Client" Member="Client">
+    <Type Name="Client">
+      <Column Name="idClient" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="Char(40) NOT NULL" CanBeNull="false" />
+      <Column Name="Surrname" Type="System.String" DbType="Char(40) NOT NULL" CanBeNull="false" />
+      <Column Name="CompanyName" Type="System.String" DbType="Char(40)" CanBeNull="true" />
+      <Column Name="MobileNo" Type="System.String" DbType="Char(12) NOT NULL" CanBeNull="false" />
+      <Column Name="FaxNo" Type="System.String" DbType="Char(12)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

@@ -1,6 +1,6 @@
 ﻿namespace emgui
 {
-    partial class Update
+    partial class UpdateProduct
     {
         /// <summary>
         /// Required designer variable.
@@ -29,9 +29,12 @@
         private void InitializeComponent()
         {
             this.dgvUpdate = new System.Windows.Forms.DataGridView();
-            this.btnUpdateShow = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.tbProductName = new System.Windows.Forms.TextBox();
+            this.tbType = new System.Windows.Forms.TextBox();
+            this.tbPrice = new System.Windows.Forms.TextBox();
+            this.tbModelNumber = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUpdate)).BeginInit();
             this.SuspendLayout();
             // 
@@ -42,20 +45,11 @@
             this.dgvUpdate.Name = "dgvUpdate";
             this.dgvUpdate.Size = new System.Drawing.Size(776, 232);
             this.dgvUpdate.TabIndex = 0;
-            // 
-            // btnUpdateShow
-            // 
-            this.btnUpdateShow.Location = new System.Drawing.Point(46, 293);
-            this.btnUpdateShow.Name = "btnUpdateShow";
-            this.btnUpdateShow.Size = new System.Drawing.Size(109, 23);
-            this.btnUpdateShow.TabIndex = 1;
-            this.btnUpdateShow.Text = "Show Employee";
-            this.btnUpdateShow.UseVisualStyleBackColor = true;
-            this.btnUpdateShow.Click += new System.EventHandler(this.btnUpdateShow_Click);
+            this.dgvUpdate.SelectionChanged += new System.EventHandler(this.dgvUpdate_SelectionChanged);
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(197, 293);
+            this.btnUpdate.Location = new System.Drawing.Point(359, 415);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(165, 23);
             this.btnUpdate.TabIndex = 2;
@@ -73,17 +67,49 @@
             this.label1.Text = "To update employee data, select record in table, change it and then click Update " +
     "Data button.";
             // 
-            // Update
+            // tbProductName
+            // 
+            this.tbProductName.Location = new System.Drawing.Point(40, 354);
+            this.tbProductName.Name = "tbProductName";
+            this.tbProductName.Size = new System.Drawing.Size(100, 20);
+            this.tbProductName.TabIndex = 4;
+            // 
+            // tbType
+            // 
+            this.tbType.Location = new System.Drawing.Point(180, 354);
+            this.tbType.Name = "tbType";
+            this.tbType.Size = new System.Drawing.Size(100, 20);
+            this.tbType.TabIndex = 5;
+            // 
+            // tbPrice
+            // 
+            this.tbPrice.Location = new System.Drawing.Point(322, 354);
+            this.tbPrice.Name = "tbPrice";
+            this.tbPrice.Size = new System.Drawing.Size(100, 20);
+            this.tbPrice.TabIndex = 6;
+            // 
+            // tbModelNumber
+            // 
+            this.tbModelNumber.Location = new System.Drawing.Point(474, 354);
+            this.tbModelNumber.Name = "tbModelNumber";
+            this.tbModelNumber.Size = new System.Drawing.Size(100, 20);
+            this.tbModelNumber.TabIndex = 7;
+            // 
+            // UpdateProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.tbModelNumber);
+            this.Controls.Add(this.tbPrice);
+            this.Controls.Add(this.tbType);
+            this.Controls.Add(this.tbProductName);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnUpdate);
-            this.Controls.Add(this.btnUpdateShow);
             this.Controls.Add(this.dgvUpdate);
-            this.Name = "Update";
+            this.Name = "UpdateProduct";
             this.Text = "Update";
+            this.Load += new System.EventHandler(this.UpdateProduct_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvUpdate)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -93,8 +119,11 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dgvUpdate;
-        private System.Windows.Forms.Button btnUpdateShow;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox tbProductName;
+        private System.Windows.Forms.TextBox tbType;
+        private System.Windows.Forms.TextBox tbPrice;
+        private System.Windows.Forms.TextBox tbModelNumber;
     }
 }
